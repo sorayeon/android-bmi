@@ -43,6 +43,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="계산하기" />
+        android:text="@string/confirm" />
 
 </LinearLayout>
