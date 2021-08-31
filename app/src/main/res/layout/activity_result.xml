@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+LinearLayout 중첩
+첫번째 레아아웃은 세로 , 두번째 레이아웃은 가로 정렬
+* orientation 쌓이는 방향
+ 가로(horizontal) | 세로(vertical)
+* gravity : Layout 정렬
+ center, top, bottom, start, end
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical">
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
         android:orientation="horizontal">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bmiTitle" />
-
         <TextView
             android:id="@+id/bmiResultTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="23.1" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -33,17 +36,19 @@
         android:gravity="center"
         android:padding="10dp"
         android:orientation="horizontal">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/resultTitle" />
-
+        <!--
+        * tools:text
+         실제 앱에서는 표기하지 않지만
+         layout.xml 에서 샘플값을 보여주고 싶을때 자주 사용
+        -->
         <TextView
             android:id="@+id/resultTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="과체중 입니다." />
-
     </LinearLayout>
 </LinearLayout>

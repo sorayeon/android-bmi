@@ -29,18 +29,21 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // 이 아래로는 절대 빈 값이 올 수 없음.
+            // 유효성 검사를 했기 때문에 절대 빈 값이 올 수 없음.
             val height: Int = heightEditText.text.toString().toInt()
             val weight: Int = weightEditText.text.toString().toInt()
 
+            // Debug 레벨 로그 출력
             Log.d("MainActivity", "height : $height, weight : $weight")
 
             // 다른 엑티비티를 만들면 Manifest.xml 파일에 Activity 추가
             val intent = Intent(this, ResultActivity::class.java)
-            // 다른 엑티비티로 데이터 넘기는 방법
+
+            // 다른 엑티비티로 데이터 넘길때는 인텐트에 담는다
             intent.putExtra("height", height)
             intent.putExtra("weight", weight)
-            // 인텐트 생성후 startActivity() 호출
+
+            // 인텐트 생성 후 startActivity() 호출
             startActivity(intent)
         }
     }

@@ -22,6 +22,7 @@ class ResultActivity : AppCompatActivity() {
         // val bmi = weight / Math.pow(height / 100.0, 2.0)
         val bmi = weight / (height / 100.0).pow(2.0)
 
+        // BMI 계산에 따른 결과
         // when {} 표현식 결과를 resultText 변수에 넣을 수 있다
         val resultText = when {
             bmi >= 35.0 -> "고도 비만"

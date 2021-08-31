@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--
+LinearLayout : 순서대로 차곡차곡 쌓이는 Layout
+* orientation 쌓이는 방향
+ 가로(horizontal) | 세로(vertical)
+* padding : 내부여백
+ paddingTop, paddingBottom
+ paddingStart, paddingEnd
+ paddingHorizontal, paddingVertical
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,7 +14,23 @@
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity">
-
+    <!--
+    * layout_width, layout_height : 컴포넌트의 너비, 높이
+      match_parent : 부모 컴포넌트에 맞춤 (여기서 부모는 LinearLayout)
+      wrap_content : content 사이즈에 맞춤
+    * text : 레이블
+     values/strings.xml 에 정의
+     <string name="height">신장</string>
+    * textSize : 텍스트 사이즈 (sp 단위사용)
+    * textStyle : 텍스트 스타일 (bold, normal, italic)
+    * textColor : 텍스트 컬러
+     values/colors.xml 에 정의
+     <color name="custom_black">#FF000000</color>
+    * layout_margin : 바깥쪽 여백
+     layout_marginTop, layout_marginBottom
+     layout_marginStart, layout_marginEnd
+     layout_marginHorizontal, layout_marginVertical
+    -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,6 +39,17 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <!--
+    * id : 다른 리소스에서 참조하기 위한 id 값
+     R.java 이라는 파일 이름에 대한 정보가 저장 (코드에서 참조)
+    * inputType : 입력가능한 타입
+     number : 숫자만 입력가능 (숫자키패드)
+     numberSigned : 부호 있는 숫자
+     numberDecimal : 실수형 숫자
+     text : 일반 텍스트
+     textMultiLine : 여러줄 텍스트
+     date : 날자
+    -->
     <EditText
         android:id="@+id/heightEditText"
         android:layout_width="match_parent"
